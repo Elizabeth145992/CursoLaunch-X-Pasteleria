@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/220ce73536.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <title>GalactiBebidas</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img class="logo" src="../img/logo.png" alt="Moon Cake"></a>
+    </header>
+    <nav>
+        <div class="navegacion">
+        <ul>
+            <a class="separacion" href="#">Sucursales</a>
+            <a class="separacion" href="#">Promociones</a>
+            <a class="separacion" href="#">Envíos</a>
+            <a class="separacion" href="#">Acerca de nosotros</a>
+        </ul>
+    </div>
+    </nav>
+
+    <h1 class="titulo">¡Elige tus galactiPostres!</h1><br>
+    <div class="container">
+        <div class="container px-4">
+            <div class="row gx-5">
+              <div class="col">
+               <div class="p-3 border centrar"><i class="iconoMenu fas fa-space-shuttle"></i> <input type="button" class="btnMenu" value="Coctel" onclick="menu(1);"></div>
+               <div class="p-3 border centrar"><i class="iconoMenu fas fa-globe-asia"></i><input type="button" class="btnMenu" value="Frappé" onclick="menu(2);"></div>
+               <div class="p-3 border centrar"><i class="iconoMenu fas fa-user-astronaut"></i><input type="button" class="btnMenu" value="Smoothie" onclick="menu(3);"></div>
+               <div class="p-3 border centrar"><i class="iconoMenu fas fa-meteor"></i><input type="button" class="btnMenu" value="Malteada" onclick="menu(4);"></div>
+               <div class="p-3 border centrar"><i class="iconoMenu fas fa-star"></i><input type="button" class="btnMenu" value="Leche de luna azul" onclick="menu(5);"></div>
+              </div>
+              <div class="col">
+                <div class="p-3 border centrar">$15.00 C/U</div>
+                <div class="p-3 border centrar">$25.00 C/U</div>
+                <div class="p-3 border centrar">$25.00 C/U</div>
+                <div class="p-3 border centrar">$20.00 C/U</div>
+                <div class="p-3 border centrar">$40.00 C/U</div>
+              </div>
+            </div>
+          </div>
+          <br><br>
+
+          <h1 class="titulo">¡Haz tus pedidos!</h1><br>
+          <form action="" autocomplete="off">
+            <div class="container px-4">
+            <div class="row g-2">
+            <div class="col-2"></div>
+            <div class="col">
+              <br><br>
+                <label for="nombre" class="form-label labelForm">Nombre</label>
+                <input type="text" class="form-control input_tamano" id="nombre" name="nombre" maxlength="50" required>
+
+                <label for="apellido" class="form-label labelForm">Apellido Paterno</label>
+                <input type="text" class="form-control input_tamano" id="apellido" name="apellido" maxlength="50" required>
+
+                <label for="correo" class="form-label labelForm">Correo Electrónico</label>
+                <input type="email" class="form-control input_tamano" id="correo" name="correo" maxlength="100" required>
+
+                <label for="telefono" class="form-label labelForm">Teléfono</label>
+                <input type="tel" class="form-control input_tamano" id="telefono" name="telefono" maxlength="10" required>
+
+                <label for="direccion" class="form-label labelForm">Dirección</label>
+                <input type="text" class="form-control input_tamano" id="direccion" name="direccion" maxlngth="100" required>
+            </div>
+            
+            <div class="col">
+            <br><br>
+            <label for="descripcion" class="form-label labelForm">Descripción del Galactipastel</label>
+            <textarea class="form-control input_tamano" name="descripcion" id="descripcion" cols="30" rows="6" required></textarea><br>
+
+            <label for="sabor" class="form-label labelForm">Elige los galactisabores que gustes</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="chocolate">
+              <label class="form-check-label labelForm2" for="chocolate">
+                Coctel
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="red-velvet" checked>
+              <label class="form-check-label labelForm2" for="red-velvet">
+                Frappé
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="coco-limon" checked>
+              <label class="form-check-label labelForm2" for="coco-limon">
+                Smoothie
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="tiramisu" checked>
+              <label class="form-check-label labelForm2" for="tiramisu">
+                Malteada
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="leches" checked>
+              <label class="form-check-label labelForm2" for="leches">
+                Leche de luna azul
+              </label>
+            </div>
+              <br><br>
+              <div class="centro">
+                <input type="submit" class="btn btn-primary boton_guardar" value="Guardar" onclick="guardar();">
+                </div>
+                <br><br>
+            </form>
+            <br><br>
+    </div>
+
+    <br><br><br>
+    <footer>
+        <p>@Moon Cake. Derechos Reservados</p>
+        <div class="centro">
+            <a href="#"><i class="iconoFooter fab fa-facebook-square"></i></a>
+            <a href="#"><i class="iconoFooter fab fa-instagram-square"></i></a>
+            <a href="#" target="_blank"><i class="iconoFooter fas fa-globe"></i></a>
+        </div>
+    </footer>
+
+    <div class="modal" id="material1" tabindex="-1" ole="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Moon Cake</h5>
+            <button type="button" class="btn-close" id="close2" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="material2"></div>
+          <div class="modal-footer">
+              <button type="button" onclick="cancelar();" class="btn btn-danger boton_cancelar" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function guardar(){
+        document.getElementById('nombre').value = '';
+        document.getElementById('apellido').value = '';
+        document.getElementById('correo').value = '';
+        document.getElementById('telefono').value = '';
+        document.getElementById('direccion').value = '';
+        document.getElementById('descripcion').value = '';
+        alert('¡¡¡Gracias por su galactipedido!!!');
+      }
+      
+      function menu(n){
+        $('#material1').modal('show');
+        if(n == 1){
+          $('#material2').append('<img src="../img/coctel.jpg" alt="" style="width: 475px; height: 400px;">')
+        }else if(n == 2){
+          $('#material2').append('<img src="../img/frappe.jpg" alt="" style="width: 475px; height: 400px;">')
+        }else if(n == 3){
+          $('#material2').append('<img src="../img/smoothie.jpg" alt="" style="width: 475px; height: 400px;">')
+        }else if(n == 4){
+          $('#material2').append('<img src="../img/malteada.jpg" alt="" style="width: 475px; height: 400px;">')
+        }else if(n == 5){
+          $('#material2').append('<img src="../img/leche.jpg" alt="" style="width: 475px; height: 400px;">')
+        }
+      }
+
+      function cancelar(){
+        document.getElementById('material2').innerHTML = '';
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
